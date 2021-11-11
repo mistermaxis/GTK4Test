@@ -38,9 +38,13 @@
 
 ### CMake ###
 /build
+*/build
 /lib
+*/lib
 /bin
+*/bin
 /obj
+*/obj
 _deps
 
 ### CMake Patch ###

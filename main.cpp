@@ -1,6 +1,5 @@
 #include <iostream>
-
-void sayHello();
+#include "hello.hpp"
 
 int main() {
     std::cout << "Bye GTK3!\n";
