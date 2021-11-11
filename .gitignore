@@ -1,3 +1,8 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/cmake,c++
+# Edit at https://www.toptal.com/developers/gitignore?templates=cmake,c++
+
+### C++ ###
 # Prerequisites
 *.d
 
@@ -30,3 +35,13 @@
 *.exe
 *.out
 *.app
+
+### CMake ###
+/build
+_deps
+
+### CMake Patch ###
+# External projects
+*-prefix/
+
+# End of https://www.toptal.com/developers/gitignore/api/cmake,c++
