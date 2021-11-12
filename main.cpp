@@ -1,8 +1,7 @@
 #include <iostream>
-#include "hello.hpp"
+#include <gtk/gtk.h>
 
 int main() {
     std::cout << "Bye GTK3!\n";
-    sayHello();
     return 0;
 }
