@@ -14,7 +14,9 @@ set(GRAPHENE_CONFIG_INCLUDE "${GTK_PATH}/lib/x86_64-linux-gnu/graphene-1.0/inclu
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
-message(${GTK_INCLUDE})
+find_library(gtklib gtk-4 NAMES gtk libgtk PATHS "${GTK_PATH}/lib/x86_64-linux-gnu/libgtk-4.so.1" NO_DEFAULT_PATH)
+
+message(${gtklib})
 
 add_executable(a main.cpp)
 
@@ -26,7 +28,7 @@ include_directories(
     "${GRAPHENE_CONFIG_INCLUDE}"
 )
 
-#target_link_libraries(a )
+target_link_libraries(a PUBLIC gtklib)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
