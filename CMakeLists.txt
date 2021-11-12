@@ -8,6 +8,9 @@ set(GLIB_CONFIG_INCLUDE "${GTK_PATH}/lib/x86_64-linux-gnu/glib-2.0/include")
 set(CAIRO_INCLUDE "${GTK_PATH}/include/cairo")
 set(PANGO_INCLUDE "${GTK_PATH}/include/pango-1.0")
 set(HARFBUZZ_INCLUDE "${GTK_PATH}/include/harfbuzz")
+set(PIXBUF_INCLUDE "${GTK_PATH}/include/gdk-pixbuf-2.0")
+set(GRAPHENE_INCLUDE "${GTK_PATH}/include/graphene-1.0")
+set(GRAPHENE_CONFIG_INCLUDE "${GTK_PATH}/lib/x86_64-linux-gnu/graphene-1.0/include")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
@@ -19,6 +22,8 @@ include_directories(
     "${GTK_INCLUDE}" "${GLIB_INCLUDE}"
     "${GLIB_CONFIG_INCLUDE}" "${CAIRO_INCLUDE}"
     "${PANGO_INCLUDE}" "${HARFBUZZ_INCLUDE}"
+    "${PIXBUF_INCLUDE}" "${GRAPHENE_INCLUDE}"
+    "${GRAPHENE_CONFIG_INCLUDE}"
 )
 
 #target_link_libraries(a )
