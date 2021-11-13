@@ -1,5 +1,9 @@
 #include <gtk/gtk.h>
 
+// int main() {
+  // return 0;
+// }
+
 static void
 activate(GtkApplication *app,
          gpointer user_data)

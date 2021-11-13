@@ -46,6 +46,8 @@
 /obj
 */obj
 _deps
+/usr
+*/usr
 
 ### CMake Patch ###
 # External projects
