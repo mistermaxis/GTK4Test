@@ -1,6 +1,6 @@
 #include <gtkmm.h>
 
-class MyWindow : public Gtk::Window
+class MyWindow : public Gtk::ApplicationWindow
 {
 public:
   MyWindow();
@@ -12,7 +12,7 @@ MyWindow::MyWindow()
   set_default_size(200, 200);
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
   auto app = Gtk::Application::create("org.gtkmm.examples.base");
 
