@@ -1,31 +1,20 @@
-#include <gtk/gtk.h>
+#include <gtkmm.h>
 
-// int main() {
-  // return 0;
-// }
-
-static void
-activate(GtkApplication *app,
-         gpointer user_data)
+class MyWindow : public Gtk::Window
 {
-    GtkWidget *window;
+public:
+  MyWindow();
+};
 
-    window = gtk_application_window_new(app);
-    gtk_window_set_title(GTK_WINDOW(window), "Window");
-    gtk_window_set_default_size(GTK_WINDOW(window), 200, 200);
-    gtk_widget_show(window);
+MyWindow::MyWindow()
+{
+  set_title("Basic application");
+  set_default_size(200, 200);
 }
 
-int main(int argc,
-         char **argv)
+int main(int argc, char *argv[])
 {
-    GtkApplication *app;
-    int status;
+  auto app = Gtk::Application::create("org.gtkmm.examples.base");
 
-    app = gtk_application_new("org.gtk.example", G_APPLICATION_FLAGS_NONE);
-    g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
-    status = g_application_run(G_APPLICATION(app), argc, argv);
-    g_object_unref(app);
-
-    return status;
+  return app->make_window_and_run<MyWindow>(argc, argv);
 }
